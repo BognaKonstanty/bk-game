@@ -42,8 +42,16 @@ function setGameElements() {
     	newGameElem.style.display = 'block';
     	pickElem.style.display = 'none';
         newGameBtn.innerText = 'Jeszcze raz'; 
-        endGameElem.style.display = 'block'; 
-            
+        endGameElem.style.display = 'block';  
+        if (player.score == 10 )
+	{
+		endGameText.innerText = ' Gra zakończona.Wygrywa ' + player.name +'!';
+		
+	}
+	else if(computer.score == 10)
+	{
+		endGameText.innerText = ' Gra zakończona.Wygrywa komputer !';
+	}
   	break;
     case 'notStarted':
     default:
@@ -135,15 +143,12 @@ function endOfGame () {
 
 	if (player.score == 10 )
 	{
-		//playerResultElem.innerHTML =' Gra zakończona.Wygrywa ' + player.name;
 		gameState = 'ended';
     	setGameElements();
-		
 	}
 	else if(computer.score == 10)
 	{
 		gameState = 'ended';
-		//computerResultElem.innerHTML =' Gra zakończona.Wygrywa komputer';
 		setGameElements();
 	}
 }
