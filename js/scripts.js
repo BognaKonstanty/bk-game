@@ -39,6 +39,7 @@ function setGameElements() {
       break;
 
     case 'ended':
+    	resultsElem.style.display = 'none'; 
     	newGameElem.style.display = 'block';
     	pickElem.style.display = 'none';
         newGameBtn.innerText = 'Jeszcze raz'; 
@@ -89,9 +90,7 @@ function getComputerPick() {
 }
 
 var playerPickElem = document.getElementById('js-playerPick'),
-    computerPickElem = document.getElementById('js-computerPick'),
-    playerResultElem = document.getElementById('js-playerResult'),
-    computerResultElem = document.getElementById('js-computerResult');
+    computerPickElem = document.getElementById('js-computerPick');
 
 
 function checkRoundWinner(playerPick, computerPick) {
