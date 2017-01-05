@@ -20,8 +20,7 @@ var gameState = 'notStarted',  //started // ended
         score: 0
     };
 
- var newGameBtn = document.getElementById('js-newGameButton'),
-    newGameElem = document.getElementById('js-newGameElement'),
+ var newGameElem = document.getElementById('js-newGameElement'),
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement'),
     playerResultElem = document.getElementById('js-playerResult'),
